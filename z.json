@@ -1,0 +1,45 @@
+{
+  "Person": {
+    "description": "A person type. This is the only type you must define. Other types below will be inferred",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "facets": {
+          "index": {
+            "primary": "name_of_index?",
+            "unique": "name_of_index?",
+            "index": "name_of_index?",
+            "fullText": {
+              "language": "english",
+              "name": "name_of_index?"
+            },
+            "spatialIndex": "name_of_index?"
+          },
+          "modifiers": {
+            "after": "column",
+            "autoIncrement": false
+          }
+        }
+      },
+      "fullName": {
+        "type": "string",
+        "name": "full_name",
+        "required": true,
+        "pattern": "^.+@.+..+$",
+        "minLength": 3,
+        "maxLength": 320
+      },
+      "lastName": "string?",
+      "firstName": "string | nil",
+      "dob": "date-only",
+      "created_at": "datetime",
+      "updated_at": "datetime",
+      "useTimestamps": "currentTimestamp"
+    }
+  },
+  "ProfileInputType": {},
+  "ProfileFragmentType": {},
+  "ProfileUnionType": {},
+  "ProfileIntersectionType": {}
+}

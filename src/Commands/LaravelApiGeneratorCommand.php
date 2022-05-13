@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Parables\LaravelApiGenerator\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelApiGeneratorCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-api-generator';
 
     public $description = 'My command';
 
